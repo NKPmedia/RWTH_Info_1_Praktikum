@@ -3,8 +3,10 @@ project(RWTH_Info_1_Praktikum)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES "Versuch 0/main.cpp")
-
 file(GLOB_RECURSE sources *.cpp *.h)
 
-add_executable(Versuch0 ${sources})
+list(REMOVE_ITEM sources "${CMAKE_CURRENT_SOURCE_DIR}/Versuch 0/main.cpp")
+list(REMOVE_ITEM sources "${CMAKE_CURRENT_SOURCE_DIR}/Versuch1_1/Variablen.cpp")
+
+add_executable(Versuch0 ${sources} "Versuch 0/main.cpp")
+add_executable(Versuch1_1 ${sources} "Versuch1_1/Variablen.cpp")
