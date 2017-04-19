@@ -7,6 +7,8 @@ file(GLOB_RECURSE sources *.cpp *.h)
 
 list(REMOVE_ITEM sources "${CMAKE_CURRENT_SOURCE_DIR}/Versuch 0/main.cpp")
 list(REMOVE_ITEM sources "${CMAKE_CURRENT_SOURCE_DIR}/Versuch1_1/Variablen.cpp")
+list(REMOVE_ITEM sources "${CMAKE_CURRENT_SOURCE_DIR}/Versuch1_2/Strukturen.cpp")
 
 add_executable(Versuch0 ${sources} "Versuch 0/main.cpp")
 add_executable(Versuch1_1 ${sources} "Versuch1_1/Variablen.cpp")
+add_executable(Versuch1_2 ${sources} "Versuch1_2/Strukturen.cpp")
