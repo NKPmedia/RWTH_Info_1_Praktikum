@@ -30,40 +30,38 @@ int main()
  */
 void aufgabe5()
 {
-	int iFeld[2] = {1,2};
-	/*
-	 * Die Werte kann man über 0 und 1 erreichen.
-	 */
-	int spielfeld[2][3] = {{1,2,3},
-						   {4,5,6}};
-	/*
-	 * Die Elemente kann man über 0 bis 1 in der ersten und 0 bis 2 in der zweien Klammer erreichen.
-	 * Bsp. spielfeld[1][0] oder spielfeld[0][2]
-	 */
+    {// Eigener Block
+        int iFeld[2] = {1, 2};
+        /*
+         * Die Werte kann man über 0 und 1 erreichen.
+         */
+        int spielfeld[2][3] = {{1, 2, 3},
+                               {4, 5, 6}};
+        /*
+         * Die Elemente kann man über 0 bis 1 in der ersten und 0 bis 2 in der zweien Klammer erreichen.
+         * Bsp. spielfeld[1][0] oder spielfeld[0][2]
+         */
 
-	std::cout << iFeld[0];
-	std::cout << iFeld[1] << std::endl;
+        std::cout << iFeld[0];
+        std::cout << iFeld[1] << std::endl;
 
-	for(int i = 0; i < 2 ; i++)
-	{
-		for(int j = 0; j < 3 ; j++)
-		{
-			std::cout << spielfeld[i][j];
-		}
-	}
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                std::cout << spielfeld[i][j];
+            }
+        }
 
-	// !!!Besserer Weg!!!
+        // !!!Besserer Weg!!!
 
-	std::cout << std::endl;
-	std::array<std::array<int,3>,2> spielfeld2 = {{{1,2,3}, {4,5,6}}};
+        std::cout << std::endl;
+        std::array<std::array<int, 3>, 2> spielfeld2 = {{{1, 2, 3}, {4, 5, 6}}};
 
-	for(const auto& array : spielfeld2)
-	{
-		for(const auto& feld : array)
-		{
-			std::cout << feld;
-		}
-	}
+        for (const auto &array : spielfeld2) {
+            for (const auto &feld : array) {
+                std::cout << feld;
+            }
+        }
+    }
 }
 
 /*!
