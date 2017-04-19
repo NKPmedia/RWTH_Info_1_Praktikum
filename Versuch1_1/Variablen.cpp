@@ -12,13 +12,13 @@
 
 
 void aufgabe1_3();
-void aufgabe4();
+void aufgabe4_6_7();
 void aufgabe5();
+int getPosition(char);
 
 
 int main()
 {
-	aufgabe5();
 	return 0;
 
 }
@@ -71,7 +71,7 @@ void aufgabe5()
  *
  * @brief Lösung zur Aufgabe 4
  */
-void aufgabe4()
+void aufgabe4_6_7()
 {
 	std::string sVorname = "";
 	std::string sNachname = "";
@@ -86,6 +86,22 @@ void aufgabe4()
 
 	std::cout << sNachnameVorname << std::endl;
 	std::cout << sVornameNachname << std::endl;
+
+	int iName1 = sNachname[0];
+	int iName2 = sNachname[1];
+	std::cout << getPosition(sNachname[0]) << std::endl;
+	std::cout << getPosition(sNachname[1]) << std::endl;
+}
+
+/*!
+ * @brief Gibt die Position eines Buchstabens im Alphabet zurück
+ * @param buchstabe
+ * @return
+ */
+int getPosition(char buchstabe)
+{
+	if(buchstabe >= 97) return buchstabe - 96;
+	else return buchstabe - 64;
 }
 
 /*!
