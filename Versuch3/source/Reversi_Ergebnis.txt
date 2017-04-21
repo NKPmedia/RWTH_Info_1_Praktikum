@@ -1,0 +1,792 @@
+  A B C D E F G H 
+1                
+2                
+3                
+4       X O      
+5       O X      
+6                
+7                
+8                
+
+
+Player 1 moves to E3
+  A B C D E F G H 
+1                
+2                
+3         X      
+4       X X      
+5       O X      
+6                
+7                
+8                
+
+
+Player 2 moves to F3
+  A B C D E F G H 
+1                
+2                
+3         X O    
+4       X O      
+5       O X      
+6                
+7                
+8                
+
+
+Player 1 moves to F4
+  A B C D E F G H 
+1                
+2                
+3         X O    
+4       X X X    
+5       O X      
+6                
+7                
+8                
+
+
+Player 2 moves to D3
+  A B C D E F G H 
+1                
+2                
+3       O O O    
+4       O X X    
+5       O X      
+6                
+7                
+8                
+
+
+Player 1 moves to D2
+  A B C D E F G H 
+1                
+2       X        
+3       O X O    
+4       O X X    
+5       O X      
+6                
+7                
+8                
+
+
+Player 2 moves to G4
+  A B C D E F G H 
+1                
+2       X        
+3       O X O    
+4       O O O O  
+5       O X      
+6                
+7                
+8                
+
+
+Player 1 moves to C5
+  A B C D E F G H 
+1                
+2       X        
+3       O X O    
+4       X O O O  
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to C4
+  A B C D E F G H 
+1                
+2       X        
+3       O X O    
+4     O O O O O  
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to C3
+  A B C D E F G H 
+1                
+2       X        
+3     X X X O    
+4     X X O O O  
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to C2
+  A B C D E F G H 
+1                
+2     O X        
+3     X O X O    
+4     X X O O O  
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to H4
+  A B C D E F G H 
+1                
+2     O X        
+3     X O X O    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to D1
+  A B C D E F G H 
+1       O        
+2     O O        
+3     X O X O    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to C1
+  A B C D E F G H 
+1     X O        
+2     X X        
+3     X O X O    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to B1
+  A B C D E F G H 
+1   O O O        
+2     O X        
+3     X O X O    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to E2
+  A B C D E F G H 
+1   O O O        
+2     O X X      
+3     X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to F2
+  A B C D E F G H 
+1   O O O        
+2     O O O O    
+3     X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to E1
+  A B C D E F G H 
+1   O O O X      
+2     O X X O    
+3     X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to F1
+  A B C D E F G H 
+1   O O O O O    
+2     O X X O    
+3     X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to G1
+  A B C D E F G H 
+1   O O O O O X  
+2     O X X X    
+3     X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to H1
+  A B C D E F G H 
+1   O O O O O O O
+2     O X X X    
+3     X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to B2
+  A B C D E F G H 
+1   O O O O O O O
+2   X X X X X    
+3     X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to A3
+  A B C D E F G H 
+1   O O O O O O O
+2   O X X X X    
+3 O   X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to A1
+  A B C D E F G H 
+1 X O O O O O O O
+2   X X X X X    
+3 O   X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to B3
+  A B C D E F G H 
+1 X O O O O O O O
+2   O O X X X    
+3 O O X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to A2
+  A B C D E F G H 
+1 X O O O O O O O
+2 X X X X X X    
+3 O X X X X X    
+4     X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to B4
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X O X X    
+3 O O O X X X    
+4   O X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to A4
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X O X X    
+3 X X O X X X    
+4 X X X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to G2
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X O O O O  
+3 X X O X X X    
+4 X X X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 1 moves to H2
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X X X X
+3 X X O X X X    
+4 X X X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to H3
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X X O O
+3 X X O X X X   O
+4 X X X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X X O O
+3 X X O X X X   O
+4 X X X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to G3
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O O O O O
+4 X X X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O O O O O
+4 X X X X X X X X
+5     X X X      
+6                
+7                
+8                
+
+
+Player 2 moves to H5
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O O O O O
+4 X X X X X X O O
+5     X X X     O
+6                
+7                
+8                
+
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O O O O O
+4 X X X X X X O O
+5     X X X     O
+6                
+7                
+8                
+
+
+Player 2 moves to G5
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O O O O O
+4 X X X X X O O O
+5     X X X   O O
+6                
+7                
+8                
+
+
+Player 1 moves to H6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X X X O O
+5     X X X   X O
+6               X
+7                
+8                
+
+
+Player 2 moves to H7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X X X O O
+5     X X X   X O
+6               O
+7               O
+8                
+
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X X X O O
+5     X X X   X O
+6               O
+7               O
+8                
+
+
+Player 2 moves to G6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X X X O O
+5     X X X   O O
+6             O O
+7               O
+8                
+
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X X X O O
+5     X X X   O O
+6             O O
+7               O
+8                
+
+
+Player 2 moves to F5
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X O O O O
+5     X X X O O O
+6             O O
+7               O
+8                
+
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X O O O O
+5     X X X O O O
+6             O O
+7               O
+8                
+
+
+Player 2 moves to A5
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X O X X O O O O
+5 O   X X X O O O
+6             O O
+7               O
+8                
+
+
+Player 1 moves to B5
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X X X O O O O
+5 O X X X X O O O
+6             O O
+7               O
+8                
+
+
+Player 2 moves to A6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X O X O O O O
+5 O O X X X O O O
+6 O           O O
+7               O
+8                
+
+
+Player 1 moves to A7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O X O O O
+4 X X O X O O O O
+5 X O X X X O O O
+6 X           O O
+7 X             O
+8                
+
+
+Player 2 moves to B6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X O O O O O O
+4 X X O O O O O O
+5 X O O X X O O O
+6 X O         O O
+7 X             O
+8                
+
+
+Player 1 moves to C6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X X X O O O
+6 X X X       O O
+7 X             O
+8                
+
+
+Player 2 moves to F6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X X O O O O
+6 X X X     O O O
+7 X             O
+8                
+
+
+Player 1 moves to E6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X X O O O
+3 X X X O X O O O
+4 X X X O X O O O
+5 X X X X X O O O
+6 X X X   X O O O
+7 X             O
+8                
+
+
+Player 2 moves to E7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X X O O O O
+6 X X X   O O O O
+7 X       O     O
+8                
+
+
+Player 1 moves to F7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X X O O O O
+6 X X X   X O O O
+7 X       O X   O
+8                
+
+
+Player 2 moves to E8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X X O O O O
+6 X X X   X O O O
+7 X       O O   O
+8         O      
+
+
+Player 1 moves to G8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X X O O O O
+6 X X X   X O O O
+7 X       O X   O
+8         O   X  
+
+
+Player 2 moves to G7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X X O O O O
+6 X X X   X O O O
+7 X       O O O O
+8         O   X  
+
+
+Player 1 moves to H8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X X O O O O
+5 X X X X X O O O
+6 X X X   X X O O
+7 X       O O X O
+8         O   X X
+
+
+Player 2 moves to F8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X X O O O O
+5 X X X X X O O O
+6 X X X   X X O O
+7 X       O O O O
+8         O O X X
+
+
+Player 1 moves to D8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X X O O O O
+5 X X X X X O O O
+6 X X X   X X O O
+7 X       X O O O
+8       X X X X X
+
+
+Player 2 moves to D6
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X O O O O O
+4 X X X O O O O O
+5 X X X O O O O O
+6 X X X O O O O O
+7 X       X O O O
+8       X X X X X
+
+
+Player 1 moves to D7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O X X O O O O
+3 X X X X O O O O
+4 X X X X O O O O
+5 X X X X O O O O
+6 X X X X O O O O
+7 X     X X O O O
+8       X X X X X
+
+
+Player 2 moves to C7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O O X O O O O
+3 X X O X O O O O
+4 X X O X O O O O
+5 X X O X O O O O
+6 X X O O O O O O
+7 X   O O O O O O
+8       X X X X X
+
+
+Player 1 moves to B7
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O O X O O O O
+3 X X O X O O O O
+4 X X O X O O O O
+5 X X O X O O O O
+6 X X X O O O O O
+7 X X O O O O O O
+8       X X X X X
+
+
+Player 2 moves to A8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O O X O O O O
+3 X X O X O O O O
+4 X X O X O O O O
+5 X X O O O O O O
+6 X X O O O O O O
+7 X O O O O O O O
+8 O     X X X X X
+
+
+Player 1 moves to B8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O O X O O O O
+3 X X O X O O O O
+4 X X O X O O O O
+5 X X O O O O O O
+6 X X O O O O O O
+7 X X O O O O O O
+8 O X   X X X X X
+
+
+Player 2 moves to C8
+  A B C D E F G H 
+1 X O O O O O O O
+2 X O O X O O O O
+3 X X O X O O O O
+4 X X O X O O O O
+5 X X O O O O O O
+6 X X O O O O O O
+7 X X O O O O O O
+8 O O O X X X X X
+
+
+Player 2 wins !
