@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classrelease__docs_1_1WikiBrancher.html" title="release_docs.WikiBrancher" alt="" coords="117,5,299,32"/>
+<area shape="rect" id="node3" href="$classupload_1_1AbstractRpcServer.html" title="upload.AbstractRpcServer" alt="" coords="121,56,295,83"/>
+<area shape="rect" id="node5" href="$classupload_1_1VersionControlSystem.html" title="upload.VersionControlSystem" alt="" coords="111,132,305,159"/>
+<area shape="rect" id="node4" href="$classupload_1_1HttpRpcServer.html" title="elif e.code &gt;= 500 and e.code &lt; 600: Server Error &#45; try again." alt="" coords="357,43,507,69"/>
+<area shape="rect" id="node6" href="$classupload_1_1GitVCS.html" title="upload.GitVCS" alt="" coords="377,93,487,120"/>
+<area shape="rect" id="node7" href="$classupload_1_1MercurialVCS.html" title="upload.MercurialVCS" alt="" coords="359,144,505,171"/>
+<area shape="rect" id="node8" href="$classupload_1_1SubversionVCS.html" title="upload.SubversionVCS" alt="" coords="353,195,511,221"/>
+</map>
