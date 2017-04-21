@@ -8,37 +8,37 @@ Im root Ordner befindet sich ein Makefile, welches alle Versuche compiliert.
 
 Orderstrucktur:
 
-├── Makefile            //Makerfile des gesamten projekts
+    ├── Makefile            //Makerfile des gesamten projekts
 
-├── README.md           //Readme
+    ├── README.md           //Readme
 
-├── Versuch0            //Ein Versuch
+    ├── Versuch0            //Ein Versuch
 
-│   ├── bin             //Beinhaltet die ausführbare Datei
+    │   ├── bin             //Beinhaltet die ausführbare Datei
 
-│   ├── Makefile        //Makefile des Versuches
+    │   ├── Makefile        //Makefile des Versuches
 
-│   ├── obj             //Beinhaltet die .o Dateien
+    │   ├── obj             //Beinhaltet die .o Dateien
 
-│   └── source          //Beinhaltet den Source-code (das eigentliche Programm)
+    │   └── source          //Beinhaltet den Source-code (das eigentliche Programm)
 
-└── Versuch4
+    └── Versuch4
 
-    ├── bin
-    
-    ├── googletest      //Beinhaltet den googletest code
-    
-    ├── Makefile
-    
-    ├── obj
-    
-    ├── source
-    
-    ├── testObj         //Beinhaltet die .o Dateien der tests
-    
-    ├── tests           //Beinhaltet den Source der tests
-    
-    └── Versuch4.doxyfile
+        ├── bin
+
+        ├── googletest      //Beinhaltet den googletest code
+
+        ├── Makefile
+
+        ├── obj
+
+        ├── source
+
+        ├── testObj         //Beinhaltet die .o Dateien der tests
+
+        ├── tests           //Beinhaltet den Source der tests
+
+        └── Versuch4.doxyfile
     
 
 
