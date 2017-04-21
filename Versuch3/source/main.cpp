@@ -22,6 +22,19 @@
 #include <stdlib.h>
 
 /**
+ * @brief checks if the positions i,j are on the field
+ * @param i position i on field
+ * @param j position j on field
+ * @return true if i,j are on the field
+ */
+bool onField(int i,int j)
+{
+	if(i < 0 || i > 7) return false;
+	if(j < 0 || j > 7) return false;
+	return true;
+}
+
+/**
  * @brief Function providing first initialization of a new field
  *
  * This function fills an existing field with zeros and creates the starting pattern.
@@ -92,6 +105,15 @@ void show_field(const int field[SIZE_Y][SIZE_X])
 	}//for j
 }
 
+/**
+ * @brief Checks who is the winner of the game
+ * @param field
+ * @return the winner or 0 if drawn
+ *
+ * This function checks who is the winner of the game.
+ * It return 0 for drawn 1 for player 1 and 2 for player 2
+ *
+ */
 int winner(const int field[SIZE_Y][SIZE_X])
 {
 	int count_p1 = 0;
@@ -101,14 +123,15 @@ int winner(const int field[SIZE_Y][SIZE_X])
 	{
 		for (int i = 0; i < SIZE_X; i++)
 		{
-			//loop through all fields + counting of X (1) and O (2)
+			if(field[j][i] == 1) count_p1++;
+			else if(field[j][i] == 2) count_p2++;
 		}
 	}
-	if ("draw")
+	if (count_p1 == count_p2)
 	{
 		return 0;
 	}
-	if ("player 2 wins")
+	if (count_p2 > count_p1)
 	{
 		return 2;
 	}
@@ -118,6 +141,16 @@ int winner(const int field[SIZE_Y][SIZE_X])
 	}
 }
 
+/**
+ * @brief Chechs if a turn is valid
+ * @param field the field with the current state
+ * @param player the active player
+ * @param pos_x turn position
+ * @param pos_y turn position
+ * @return true if the turn is valid
+ *
+ * This function checks if the turn a player wants to make is valid
+ */
 bool turn_valid(const int field[SIZE_Y][SIZE_X], const int player, const int pos_x, const int pos_y)
 {
 	// Process all possible directions
@@ -129,28 +162,142 @@ bool turn_valid(const int field[SIZE_Y][SIZE_X], const int player, const int pos
 		return false;
 	}
 
+	//take a look at the field arround the turn position
 	for (int i = -1; i <= 1; i++)
 	{
 		for (int j = -1; j <= 1; j++)
 		{
-			//check if you can find an opponents stone in a neighboring field
-			//then check if in this direction all stones are opponent stones until
-			//the line is terminated by one of your own stone
-			//in that case return true otherwise not
+			//is it a opponent field?
+			if(field[pos_y+i][pos_x+j] == opponent)
+			{
+				int stepsI = i+i;
+				int stepsJ = j+j;
+				int nextField = 0;
+
+				//Follow the stones until you leave the field
+				while(onField(pos_y+stepsI,pos_x+stepsJ))
+				{
+					nextField = field[pos_y+stepsI][pos_x+stepsJ];
+
+					//is the row finished with a players stone
+					if(nextField == player) return true;
+
+					//is there a break in the row of opponent stones
+					if(nextField == 0) break;
+
+					stepsI += i;
+					stepsJ += j;
+				}
+			}
 		}
 	}
 	return false;
 }
 
-void execute_turn(int field[SIZE_Y][SIZE_X], const int player, const int pos_x, const int pos_y)
+/**
+ * @brief Checks if two fields are equal
+ * @param field
+ * @param field2
+ * @return true if the fields are equal
+ */
+bool areFieldsEqual(const int field[SIZE_Y][SIZE_X],int field2[SIZE_Y][SIZE_X])
 {
-	// very similar to function "turn_valid" - just take care that all opponent
-	// stones are changed to yours
+	for (int j = 0; j < SIZE_Y; j++)
+	{
+		for (int i = 0; i < SIZE_X; i++)
+		{
+			if(field[i][j] != field2[i][j]) return false;
+		}
+	}
+	return true;
 }
 
+/**
+ * @brief executes a turn
+ * @param field the field
+ * @param player the number of the active player
+ * @param pos_x x position of the turn
+ * @param pos_y y position of the turn
+ *
+ * This function places a stone of the player at the position (pos_y pos_y)
+ * and changes all opponent stones witch are between this stone an another of the player
+ */
+void execute_turn(int field[SIZE_Y][SIZE_X], const int player, const int pos_x, const int pos_y)
+{
+
+	int opponent = 3 - player;
+
+	field[pos_y][pos_x] = player;
+
+	//take a look at the field arround the turn position
+	for (int i = -1; i <= 1; i++)
+	{
+		for (int j = -1; j <= 1; j++)
+		{
+			//is it a opponent field?
+			if(field[pos_y+i][pos_x+j] == opponent)
+			{
+				int stepsI = i+i;
+				int stepsJ = j+j;
+				int nextField = 0;
+				bool changeStones = false;
+
+				//Follow the stones until you leave the field
+				while(onField(pos_y+stepsI,pos_x+stepsJ))
+				{
+					nextField = field[pos_y+stepsI][pos_x+stepsJ];
+
+					//is the row finished with a players stone
+					if(nextField == player) changeStones = true;
+
+					//is there a break in the row of opponent stones
+					if(nextField == 0) break;
+						stepsI += i;
+					stepsJ += j;
+				}
+				if(changeStones)
+				{
+					//Reset steps
+					stepsI = i;
+					stepsJ = j;
+
+					//Follow the stones until you leave the field
+					while(onField(pos_y+stepsI,pos_x+stepsJ))
+					{
+						nextField = field[pos_y+stepsI][pos_x+stepsJ];
+
+						//is the row finished with a players stone
+						if(nextField == player) break;
+
+						//Change the stones
+						field[pos_y+stepsI][pos_x+stepsJ] = player;
+
+						stepsI += i;
+						stepsJ += j;
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * @brief returns the number of possible turns for a given player
+ * @param field the field
+ * @param player the active player
+ * @return the number of turns
+ */
 int possible_turns(const int field[SIZE_Y][SIZE_X], const int player)
 {
-	return 0;
+	int turns = 0;
+	for (int j = 0; j < SIZE_Y; j++)
+		{
+		for (int i = 0; i < SIZE_X; i++)
+		{
+			if(turn_valid(field,player,i,j)) turns++;
+		}
+	}
+	return turns;
 }
 
 bool human_turn(int field[SIZE_Y][SIZE_X], const int player)
@@ -189,6 +336,36 @@ bool human_turn(int field[SIZE_Y][SIZE_X], const int player)
 
 	return true;
 }
+/**
+ * @brief makes a human or computer turn depending on the playerType
+ * @param playerType indicates the type of turn
+ * @param field the field to play on
+ * @param player the active player
+ * @return returns the number of possible turns before the player mad his turn
+ */
+int autoTurn(int playerType ,int field[SIZE_Y][SIZE_X], const int player)
+{
+	int turnsPlayer = 0;
+	if(playerType == HUMAN)
+	{
+		turnsPlayer = possible_turns(field,player);
+		if(turnsPlayer > 0)
+		{
+			human_turn(field,player);
+			show_field(field);
+		}
+	}
+	else if(playerType == COMPUTER)
+	{
+		turnsPlayer = possible_turns(field,player);
+		if(turnsPlayer > 0)
+		{
+			computer_turn(field,player);
+			show_field(field);
+		}
+	}
+	return turnsPlayer;
+}
 
 void game(const int player_typ[2])
 {
@@ -200,16 +377,33 @@ void game(const int player_typ[2])
 
 	int current_player = 1;
 	show_field(field);
-	//let each player make its moves until no further moves are possible
+	while(true)
+	{
+		//Let them play
+		int turnsPlayer1 = autoTurn(player_typ[0],field,1);
+		int turnsPlayer2 = autoTurn(player_typ[1],field,2);
+
+		//No more turns for both
+		if(turnsPlayer1 == 0 && turnsPlayer2 == 0) break;
+	}
 
 	switch (winner(field))
 	{
-
+	case 0:
+		std::cout  << "Drawn" << std::endl;
+		break;
+	case 1:
+		std::cout  << "Player 1 wins" << std::endl;
+		break;
+	case 2:
+		std::cout  << "Player 2 wins" << std::endl;
+		break;
 	}
 }
 
 int main(void)
 {
+	//Test stuff
 	if (TEST == 1)
 	{
 		bool result = run_full_test();
@@ -223,13 +417,20 @@ int main(void)
 		}
 	}
 
-	int field[SIZE_Y][SIZE_X];
+	//Ask for the player typs
+	std::cout  << "The first player should be a COMPUTER: 2 , HUMAN: 1 :" << std::endl;
+	int player1 = 1;
+	std::cin >> player1;
 
-	initialize_field(field);
+	std::cout  << "The second player should be a COMPUTER: 2 , HUMAN: 1 :" << std::endl;
+	int player2 = 1;
+	std::cin >> player2;
 
-	//show_field(field);
+	int player_type[2] = { COMPUTER, COMPUTER };  //Contains information wether players are HUMAN(=1) or COPMUTER(=2)
+	player_type[0] = player1;
+	player_type[1] = player2;
 
-	// int player_type[2] = { HUMAN, HUMAN };  //Contains information wether players are HUMAN(=1) or COPMUTER(=2)
-	// game(player_type);
+	//Start the game
+	game(player_type);
 	return 0;
 }
