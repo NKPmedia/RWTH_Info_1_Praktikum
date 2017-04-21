@@ -9,13 +9,9 @@ Im root Ordner befindet sich ein Makefile, welches alle Versuche compiliert.
 Orderstrucktur:
 
     ├── Makefile            //Makerfile des gesamten projekts
-
     ├── README.md           //Readme
-
     ├── Versuch0            //Ein Versuch
-
     │   ├── bin             //Beinhaltet die ausführbare Datei
-
     │   ├── Makefile        //Makefile des Versuches
 
     │   ├── obj             //Beinhaltet die .o Dateien
