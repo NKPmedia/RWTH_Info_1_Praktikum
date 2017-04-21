@@ -1,6 +1,6 @@
 # RWTH_Info_1_Praktikum
 
-Alle Verusch des Info 1 Praktikums der RWTH des WS2017
+Alle Verusch des Info 1 Praktikums der RWTH des SS2017
 
 Das Projekt beinhaltet alle Versuche in eigenen Unterverzeichnissen.
 Jeder Versuch beseitzt ein eigenes Makefile, mit dem er compiliert werden kann.
