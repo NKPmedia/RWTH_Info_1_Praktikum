@@ -40,7 +40,7 @@ void Stack::ausgabe() const
 		while(cursor != NULL)
 		{
 			cursor->getData().print();
-			cursor = cursor->getNext()();
+			cursor = cursor->getNext();
 		}
 	}
 }
@@ -61,9 +61,9 @@ bool Stack::pop(Student& student)
     }
     else
     {
-        student = head->getData()();
+        student = head->getData();
         ListElem* cursor = head;
-        head = head->getNext()();
+        head = head->getNext();
         delete cursor;
     }
     return true;

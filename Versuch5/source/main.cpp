@@ -33,19 +33,19 @@ int main()
     if (abfrage != 'j')
     {
     	student = Student(12345, "Siggi Baumeister", "23.04.1983", "Ahornst.55");
-    	testStack.d(student);
-    	student = Student(23456, "Walter Rodenstock", "15.10.1963", "Wüllnerstr.9");
-    	testStack.d(student);
+    	testStack.push(student);
+    	student = Student(23456, "Walter Rodenstock", "15.10.1963", "Wï¿½llnerstr.9");
+    	testStack.push(student);
     	student = Student(34567, "Harro Simoneit", "19.06.1971", "Am Markt 1");
-    	testStack.d(student);
+    	testStack.push(student);
     }
 
     do
     {
         std::cout << "\nMenue:" << std::endl
                   << "-----------------------------" << std::endl
-                  << "(1): Datenelement hinzufügen" << std::endl
-                  << "(2): Datenelement abhängen" << std::endl
+                  << "(1): Datenelement hinzufï¿½gen" << std::endl
+                  << "(2): Datenelement abhï¿½ngen" << std::endl
                   << "(3): Datenbank ausgeben" << std::endl
                   << "(7): Beenden" << std::endl;
         std::cin >> abfrage;
@@ -59,7 +59,7 @@ int main()
 					std::string dateOfBirth = "";
 					std::string address = "";
 
-					std::cout << "Bitte geben sie die Daten für den Studenten ein.\nName: ";
+					std::cout << "Bitte geben sie die Daten fï¿½r den Studenten ein.\nName: ";
 					std::cin.ignore(10, '\n');    // ignore character '\n', which still is in the buffer
 					getline(std::cin, name);    // get entire line, including whitespace
 					std::cout << "Geburtsdatum: ";
@@ -71,14 +71,14 @@ int main()
 
 					student = Student(matNr, name, dateOfBirth, address);
 
-					testStack.d(student);
+					testStack.push(student);
 				}
 				break;
             case '2':
             	{
 					Student delElem = Student();
 					bool success = false;
-					success = testStack.c(delElem);
+					success = testStack.pop(delElem);
 
 					if(success)
 					{
@@ -94,7 +94,7 @@ int main()
 
             case '3':
                 std::cout << "Inhalt des Stacks:\n";
-                testStack.b();
+                testStack.ausgabe();
                 break;
 
             case '7':

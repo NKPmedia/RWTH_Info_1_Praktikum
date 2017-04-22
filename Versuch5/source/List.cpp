@@ -25,7 +25,7 @@ void List::enqueue_head(const Student &pData)
     }
     else
     {
-        new_element->gN(head);
+        new_element->setNext(head);
     }
 
     head = new_element;
@@ -49,22 +49,22 @@ bool List::dequeue(Student& pData)
     }
     else if (head == tail)                                  // only one element
     {
-        pData = head->sD();
+        pData = head->getData();
         delete head;
         head = NULL;
         tail = NULL;
     }
     else
     {
-        while (cursor->sN() != tail)
+        while (cursor->getNext() != tail)
         {
-            cursor = cursor->sN();
+            cursor = cursor->getNext();
         }
 
-        pData = tail->sD();
+        pData = tail->getData();
         tail = cursor;
-        delete cursor->sN();
-        tail->gN(NULL);
+        delete cursor->getNext();
+        tail->setNext(NULL);
     }
 
     return true;
@@ -83,8 +83,8 @@ void List::print_forwards()
 
     while (cursor != NULL)
     {
-        cursor->sD().print();
+        cursor->getData().print();
 
-        cursor = cursor->sN();
+        cursor = cursor->getNext();
     }
 }

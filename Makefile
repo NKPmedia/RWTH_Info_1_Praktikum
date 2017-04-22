@@ -7,6 +7,7 @@ all:
 	$(MAKE) --directory Versuch2_3 all
 	$(MAKE) --directory Versuch3 all
 	$(MAKE) --directory Versuch4 all
+	$(MAKE) --directory Versuch5 all
 	
 clean:
 	$(MAKE) --directory Versuch0 clean

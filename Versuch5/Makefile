@@ -1,4 +1,4 @@
-Sources=
+Sources=List.cpp ListElem.cpp main.cpp Stack.cpp Student.cpp
 Tests=
 Executable=Versuch5
 
