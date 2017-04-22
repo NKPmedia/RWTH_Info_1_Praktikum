@@ -14,15 +14,18 @@ class ListElem
 private:
 	Student data;
     ListElem* next;
+    ListElem* before;
 
 public:
-    ListElem(const Student &s, ListElem* const q);
+    ListElem(const Student &s, ListElem* const q, ListElem* const w);
 
     void setData(const Student &s);
     void setNext(ListElem* const q);
+    void setBefore(ListElem* const q);
 
     Student getData() const;
     ListElem* getNext() const;
+    ListElem* getBefore() const;
 };
 
 #endif

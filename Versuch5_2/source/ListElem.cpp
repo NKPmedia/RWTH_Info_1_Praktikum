@@ -6,8 +6,8 @@
 
 #include "ListElem.h"
 
-ListElem::ListElem(const Student &s, ListElem* const q):
-    data(s), next(q)
+ListElem::ListElem(const Student &s, ListElem* const q,ListElem* const w):
+    data(s), next(q),before(w)
 {
 }
 
@@ -29,6 +29,14 @@ void ListElem::setNext(ListElem* const q)
     next = q;
 }
 
+/**
+ * @brief sets the pointer to the last list element
+ * @param q pointer to list element
+ */
+void ListElem::setBefore(ListElem* const q)
+{
+	before = q;
+}
 
 /**
  * @brief returns the student which is saved in the list element
@@ -47,4 +55,13 @@ Student ListElem::getData() const
 ListElem* ListElem::getNext() const
 {
     return next;
+}
+
+/**
+ * @brief returns the pointer to the last list element
+ * @return pointer to to last list element
+ */
+ListElem* ListElem::getBefore() const
+{
+    return before;
 }

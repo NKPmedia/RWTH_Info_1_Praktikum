@@ -21,8 +21,11 @@ private:
 public:
     List();                                                 ///< constructor with pointer initialisation
     void enqueue_head(const Student &pData);
+    void enqueue_tail(const Student &pData);
     bool dequeue(Student& pData);
     void print_forwards();
+    void print_backwards();
+    bool delElementByNr(Student& pData,unsigned int nummer);
 };
 
 #endif /*LIST_H_*/

@@ -12,7 +12,7 @@ Stack::Stack(): head(NULL), tail(NULL)
  */
 void Stack::push(Student& newElement)
 {
-	ListElem* element = new ListElem(newElement,NULL);
+	ListElem* element = new ListElem(newElement,NULL,NULL);
 	if(head == NULL)
 	{
 		tail=element;
