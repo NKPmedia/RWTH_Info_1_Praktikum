@@ -1,6 +1,6 @@
-Sources= main.cpp Vector.cpp
-Tests=vectorTest.cpp
-Executable=Versuch4
+Sources=List.cpp ListElem.cpp main.cpp Stack.cpp Student.cpp
+Tests=
+Executable=Versuch5_2
 
 CXXFLAGS = -g -Wall -Wextra -pthread -Iinc
 CPPFLAGS = -isystem $(GTEST_DIR)/include

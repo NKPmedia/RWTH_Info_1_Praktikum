@@ -11,7 +11,7 @@
 #include <iomanip>
 #include "Vector.h"
 #include "config.h"
-#include "../googletest/include/gtest/gtest.h"
+#include "../../googletest/include/gtest/gtest.h"
 #include <unistd.h>
 
 /**
