@@ -13,3 +13,13 @@ all:
 	
 clean:
 	$(MAKE) --directory Versuch0 clean
+	$(MAKE) --directory Versuch1_1 clean
+	$(MAKE) --directory Versuch1_2 clean
+	$(MAKE) --directory Versuch2_1 clean
+	$(MAKE) --directory Versuch2_2 clean
+	$(MAKE) --directory Versuch2_3 clean
+	$(MAKE) --directory Versuch3 clean
+	$(MAKE) --directory Versuch4 clean
+	$(MAKE) --directory Versuch5 clean
+	$(MAKE) --directory Versuch5_2 clean
+	$(MAKE) --directory Versuch6 clean

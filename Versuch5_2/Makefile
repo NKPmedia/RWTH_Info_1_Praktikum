@@ -17,6 +17,7 @@ TestSourceDir=tests/
 BinDir=bin/
 
 CC=g++
+RM=rm -f
 
 Objects=$(Sources:.cpp=.o)
 TestObjects=$(Tests:.cpp=.o)
@@ -28,6 +29,9 @@ CObjects=$(addprefix $(ObjectDir),$(Objects))
 CTestObjects=$(addprefix $(TestObjectDir),$(TestObjects))
 
 CExecutable=$(addprefix $(BinDir),$(Executable))
+
+clean:
+	$(RM) $(CObjects) $(CTestObjects) gtest.a $(CExecutable)
 
 all: $(CSources) $(CExecutable)
 

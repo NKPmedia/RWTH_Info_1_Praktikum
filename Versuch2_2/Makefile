@@ -7,7 +7,7 @@ SourceDir=source/
 BinDir=bin/
 
 CC=g++
-RM=rm
+RM=rm -f
 
 #!!!!!DO NOT EDIT ANYTHING UNDER THIS LINE!!!!!
 Objects=$(Sources:.cpp=.o)
@@ -24,4 +24,4 @@ $(ObjectDir)%.o: $(SourceDir)%.cpp
 	$(CC) $(CFlags) $< -o $@
 
 clean:
-	$(RM) $(CObjects)
+	$(RM) $(CObjects) $(CExecutable)
