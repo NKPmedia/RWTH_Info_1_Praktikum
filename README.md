@@ -9,6 +9,7 @@ Im root Ordner befindet sich ein Makefile, welches alle Versuche compiliert.
 Orderstrucktur:
 
     ├── Makefile            //Makerfile des gesamten projekts
+    ├── googletest      //Beinhaltet den googletest code
     ├── README.md           //Readme
     ├── Versuch0            //Ein Versuch
     │   ├── bin             //Beinhaltet die ausführbare Datei
@@ -17,7 +18,6 @@ Orderstrucktur:
     │   └── source          //Beinhaltet den Source-code (das eigentliche Programm)
     └── Versuch4
         ├── bin
-        ├── googletest      //Beinhaltet den googletest code
         ├── Makefile
         ├── obj
         ├── source
