@@ -38,6 +38,16 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.86675839.48376294" name="/" resourcePath="Versuch8/uml">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.base.2094419748" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.363384785" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.234353494"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.638955867" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base.1566023732"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.858892178" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base.660761726"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.70931403" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base.592994163"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.1516773951" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base.293700249"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.base.498049008" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base.2098148358"/>
+						</toolChain>
+					</folderInfo>
 					<sourceEntries>
 						<entry excluding="Versuch0/src|source" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -53,7 +63,11 @@
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/RWTH_Info_1_Praktikum"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings">
 		<doc-comment-owner id="org.eclipse.cdt.ui.doxygen">
