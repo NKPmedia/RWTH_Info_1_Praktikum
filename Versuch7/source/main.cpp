@@ -19,6 +19,18 @@
 #include <string>
 #include "Student.h"
 #include <vector>
+#include <algorithm>
+
+/**
+ * @brief overload the << to better print student information
+ * @param out the stream
+ * @param student the student to print out
+ * @return
+ */
+std::ostream& operator << (std::ostream& out ,Student student)
+{
+	return student.print(out);
+}
 
 int main()
 {
@@ -49,6 +61,8 @@ int main()
                   << "(2): Datenelement abh�ngen" << std::endl
                   << "(3): Datenbank ausgeben for" << std::endl
 				  << "(4): Datenbank ausgeben back" << std::endl
+				  << "(5): Datenbank sortieren" << std::endl
+				  << "(6): Datenelement löschen" << std::endl
                   << "(7): Beenden" << std::endl;
         std::cin >> abfrage;
 
@@ -71,33 +85,78 @@ int main()
 					std::cout << "Matrikelnummer: ";
 					std::cin >> matNr;
 
+					//Add a new student
 					student = Student(matNr, name, dateOfBirth, address);
 
 					testvector.push_back(student);
 				}
 				break;
+
             case '2':
             	{
+            		//remove the last element
 					testvector.pop_back();
 					std::cout << "Das letzte Datenelemt wird entfernt\n";
             	}
                 break;
 
             case '3':
+            	//Print the database
                 std::cout << "Inhalt des Stacks:\n";
+
                 for(it = testvector.begin();it !=testvector.end();it++)
                 {
-                	it->print();
+                	std::cout << *it;
                 }
+
                 break;
 
             case '4':
+            	//Print the database backwards
                 std::cout << "Inhalt des Stacks:\n";
                 for(revIt = testvector.rbegin();revIt !=testvector.rend();revIt++)
                 {
-                	revIt->print();
+                	std::cout << *revIt;
                 }
                 break;
+
+            case '5':
+            	stable_sort(testvector.begin(),testvector.end());
+
+            	//Print the database
+            	std::cout << "Inhalt des Stacks:\n";
+
+            	for(it = testvector.begin();it !=testvector.end();it++)
+            	{
+            		std::cout << *it;
+            	}
+
+            	break;
+
+            case '6':
+				{
+					std::cout << "Geben sit eine MatNr an:\n";
+					unsigned int matNr = 0;
+					std::cin >> matNr;
+
+					//Search the matNr
+					for(it = testvector.begin();it !=testvector.end();it++)
+					{
+						if(*it == matNr)
+						{
+							testvector.erase(it);
+						}
+					}
+
+					//Print the database
+					std::cout << "Inhalt des Stacks:\n";
+
+					for(it = testvector.begin();it !=testvector.end();it++)
+					{
+						std::cout << *it;
+					}
+					break;
+				}
             case '7':
                 std::cout << "Das Programm wird nun beendet";
                 break;
@@ -111,3 +170,4 @@ int main()
 
     return 0;
 }
+
