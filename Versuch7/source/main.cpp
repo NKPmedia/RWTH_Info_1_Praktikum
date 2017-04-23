@@ -142,7 +142,7 @@ int main()
 					//Search the matNr
 					for(it = testvector.begin();it !=testvector.end();it++)
 					{
-						if(*it == matNr)
+						if(*it == matNr) //TODO: the compiler sees matNr as an int!?
 						{
 							testvector.erase(it);
 						}
