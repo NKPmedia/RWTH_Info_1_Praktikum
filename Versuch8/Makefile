@@ -1,4 +1,4 @@
-Sources= expression.cpp taschenrechner.cpp
+Sources= expression.cpp taschenrechner.cpp Const.cpp Add.cpp Result.cpp Sub.cpp Mul.cpp Div.cpp
 Tests=
 Executable=Versuch8
 

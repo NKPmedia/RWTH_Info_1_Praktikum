@@ -15,7 +15,7 @@ public:
 	Expression();
 	virtual ~Expression();
 	virtual double evaluate() const = 0; // calculates and returns the value of expression
-	virtual void print() const = 0; // returns the mathematical expression as string
+	virtual void print() const = 0;
 };
 
 #endif
