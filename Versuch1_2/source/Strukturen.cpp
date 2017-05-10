@@ -36,13 +36,16 @@ int main()
     std::cout << "Geburtsjahr " << nBenutzer.iGeburtsjahr << std::endl;
     std::cout << "Alter " << nBenutzer.iAlter << std::endl;
 
+    //Kopieren der Variablen
     Person nKopieGesamt = nBenutzer;
+
     Person nKopieEinzeln;
     nKopieEinzeln.sNachname = nBenutzer.sNachname;
     nKopieEinzeln.sVorname = nBenutzer.sVorname;
     nKopieEinzeln.iAlter = nBenutzer.iAlter;
     nKopieEinzeln.iGeburtsjahr = nBenutzer.iGeburtsjahr;
 
+    //Ausgabe
     std::cout << "Benutzerkopie gesamt" << std::endl;
     std::cout << "Name " << nKopieGesamt.sNachname << std::endl;
     std::cout << "Vorname " << nKopieGesamt.sVorname << std::endl;
