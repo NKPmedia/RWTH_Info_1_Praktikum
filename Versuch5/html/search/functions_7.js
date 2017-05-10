@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['isimage',['IsImage',['../classupload_1_1VersionControlSystem.html#a846889ecd2ef40870b456ddb5b349e02',1,'upload::VersionControlSystem']]]
+  ['setdata',['setData',['../classListElem.html#a07249200c00b36647556e33b9306c67d',1,'ListElem']]],
+  ['setnext',['setNext',['../classListElem.html#a8dcd5f6f4d561bb0e4c9c5431f550caf',1,'ListElem']]]
 ];

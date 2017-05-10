@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['show_5ffield',['show_field',['../main_8cpp.html#aacdbfaa6045beffcf99b25f92f979b29',1,'show_field(const int field[SIZE_Y][SIZE_X]):&#160;main.cpp'],['../test_8cpp.html#aacdbfaa6045beffcf99b25f92f979b29',1,'show_field(const int field[SIZE_Y][SIZE_X]):&#160;main.cpp']]]
+  ['reversi',['Reversi',['../index.html',1,'']]],
+  ['reversi_5fki_2ecpp',['Reversi_KI.cpp',['../Reversi__KI_8cpp.html',1,'']]],
+  ['reversi_5fki_2eh',['Reversi_KI.h',['../Reversi__KI_8h.html',1,'']]]
 ];

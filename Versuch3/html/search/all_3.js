@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['human',['HUMAN',['../main_8cpp.html#aa6ee1a8b97b0f0538e668df592ae147e',1,'main.cpp']]]
+  ['game',['game',['../main_8cpp.html#a9e0b7a14e36b03a60a6990a6b7cff829',1,'main.cpp']]]
 ];

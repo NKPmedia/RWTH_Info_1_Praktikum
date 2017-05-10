@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ausgabe',['ausgabe',['../classStack.html#a0b165fc678771a17859a1e1b5bea378a',1,'Stack']]]
+  ['ausgabe',['ausgabe',['../classStack.html#a15f5b63e791731edc265d74ec43c95f1',1,'Stack']]]
 ];

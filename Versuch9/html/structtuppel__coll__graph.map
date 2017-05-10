@@ -1,0 +1,4 @@
+<map id="tuppel" name="tuppel">
+<area shape="rect" id="node2" href="$classStreet.html" title="Street" alt="" coords="5,5,63,32"/>
+<area shape="rect" id="node3" href="$classCity.html" title="City" alt="" coords="124,5,171,32"/>
+</map>
