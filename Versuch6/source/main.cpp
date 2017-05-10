@@ -20,6 +20,10 @@
 #include "Student.h"
 #include <vector>
 
+/**
+ * @brief starts a UI the interact with a vecotr of students
+ * @return
+ */
 int main()
 {
 	std::vector<Student> testvector;
@@ -31,6 +35,7 @@ int main()
     std::cout << "Wollen sie den Stack selbst fuellen? (j)/(n) ";
     std::cin >> abfrage;
 
+    //Fills the vectors
     if (abfrage != 'j')
     {
     	student = Student(12345, "Siggi Baumeister", "23.04.1983", "Ahornst.55");
@@ -41,6 +46,7 @@ int main()
     	testvector.push_back(student);
     }
 
+    //The UI loop
     do
     {
         std::cout << "\nMenue:" << std::endl

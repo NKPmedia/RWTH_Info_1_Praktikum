@@ -15,6 +15,9 @@
 #include "Sub.h"
 #include "Div.h"
 
+/**
+ * @brief tests the const class
+ */
 void testConst()
 {
 	Const c(4);
@@ -22,6 +25,9 @@ void testConst()
 	std::cout << " = " << c.evaluate() << std::endl;
 }
 
+/**
+ * @brief tests the Result class
+ */
 void testResult()
 {
 	Result res ( new Const(4) );
@@ -29,6 +35,9 @@ void testResult()
 	std::cout << " = " << res.evaluate() << std::endl;
 }
 
+/**
+ * @brief tests the Add and Const class
+ */
 void testAddConst()
 {
 	Result res (new Add (
@@ -40,6 +49,9 @@ void testAddConst()
 	std::cout << " = " << res.evaluate() << std::endl;
 }
 
+/**
+ * @brief tests the Mul Add and Cost class
+ */
 void testMulAddConst()
 {
 	Result res (	new Add (
@@ -54,6 +66,9 @@ void testMulAddConst()
 	std::cout << " = " << res.evaluate() << std::endl;
 }
 
+/**
+ * @brief tests the Sub Mul Add and Const class
+ */
 void testSubMulAddConst()
 {
 	Result res (new Add (
@@ -72,6 +87,9 @@ void testSubMulAddConst()
 }
 
 
+/**
+ * @brief tests all classes
+ */
 void finalTest()
 {
 
@@ -102,6 +120,10 @@ void finalTest()
 
 }
 
+/**
+ * @brief test the classes
+ * @return
+ */
 int main()
 {
 	// Implementieren Sie zuerst die Klassen Const und Result und testen Sie das Ergebnis.

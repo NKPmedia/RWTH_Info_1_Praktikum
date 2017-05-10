@@ -17,10 +17,18 @@ Result::~Result()
 {
 }
 
+/**
+ * @brief returns result of the expression
+ * @return the result
+ */
 double Result::evaluate() const
 {
 	return this->expression->evaluate();
 }
+
+/**
+ * @brief prints a representation of the expressionn to cout
+ */
 void Result::print() const
 {
 	this->expression->print();

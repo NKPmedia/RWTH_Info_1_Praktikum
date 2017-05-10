@@ -24,7 +24,7 @@
  *
  * @return
  */
-int main(int argc, char **argv)
+int main2(int argc, char **argv)
 { 
 	if(TEST)
 	{
@@ -66,6 +66,70 @@ int main(int argc, char **argv)
 	}
 
 	std :: cout << std :: fixed ;
+
+	std::cout << "Sie können so weit sehen: " << viewLength << std::endl;
+	std::cout << "Sie sind so viel Meter hoch: " << eye.getY() << std::endl;
+	std::cout << "Der Wingel beträgt: " << earthAngle << std::endl;
+	std::cout << "Steps: " << steps << std::endl;
+
+	/*
+	 * Das Ergebniss ist in etwa 80066m bei 500m Höhe
+	 * Ergebniss im Internet überprüft!
+	 * Intenet Höhe = 8848 => 360km Blick
+	 * Programm Höhe = 8848 => 336km Blick
+	 */
+
+
+	return 0;
+
+}
+
+/**
+ *
+ * @param argc
+ * @param argv
+ *
+ * This program starts the tests if TEST is 1
+ * Then it calculates the distance a person is able to see if he stands on a 500m high tower
+ *
+ * @return
+ */
+int main(int argc, char **argv)
+{
+	if(TEST)
+	{
+		::testing::InitGoogleTest(&argc, argv);
+		RUN_ALL_TESTS();
+	}
+
+	double earthAngle = -1/100000;
+	int steps = 0;
+
+	Vector person(0,501.8,0);
+	Vector earth(0,6371000,0);
+	Vector eye = earth.add(person);
+
+	Vector view = eye.sub(earth);
+	int viewLength = 1;
+	//As long as the view vector is under the eye of the person
+	std::cout << view.scalarProd(earth) << std::endl;
+	while(view.scalarProd(earth) >= 0.01 || view.scalarProd(earth) <= -0.01)
+	{
+		viewLength = view.length();
+		std::cout << view.scalarProd(earth) << std::endl;
+		//Creates new earth vector and rotates it
+		earth = Vector(0,6371000,0);
+		earth = earth.rotZ(earthAngle);
+
+		view = eye.sub(earth);
+		earthAngle -= 1/100000;
+
+		steps++;
+	}
+
+	std :: cout << std :: fixed ;
+
+	viewLength = view.length();
 
 	std::cout << "Sie können so weit sehen: " << viewLength << std::endl;
 	std::cout << "Sie sind so viel Meter hoch: " << eye.getY() << std::endl;

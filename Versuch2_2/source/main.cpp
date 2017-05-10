@@ -10,6 +10,10 @@
 
 int fib(int n);
 
+/**
+ * @brief Berechnet die Fibonacci Zahl für 0 - 48
+ * @return
+ */
 int main ()
 {
     std :: cout << " Fibonacci - Zahlen :" << std :: endl ;
@@ -22,7 +26,7 @@ int main ()
 
 /*!
  * @brief Berechnet die Fibonacci Zahl
- * @param n
+ * @param n wert dür den fibonacci algo
  * @return
  *
  * Bessere Version, da es keine doppelten Berechnungen gibt

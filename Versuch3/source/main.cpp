@@ -300,8 +300,17 @@ int possible_turns(const int field[SIZE_Y][SIZE_X], const int player)
 	return turns;
 }
 
+/**
+ * @brief lets the human make a turn
+ * @param field the field to play on
+ * @param player the active player
+ * @return false if the player cant make a turn
+ *
+ * Asks the human player for a new stone position and makes the turn
+ */
 bool human_turn(int field[SIZE_Y][SIZE_X], const int player)
 {
+	//return false if the player cant make a turn
 	if (possible_turns(field, player) == 0)
 	{
 		return false;
@@ -311,8 +320,10 @@ bool human_turn(int field[SIZE_Y][SIZE_X], const int player)
 	int py;
 	bool repeat=false;
 
+	//Wait for a valid turn
 	while (true)
 	{
+		//Get the position from the human
 		std::string input;
 		input.reserve(50);
 		std::cout << std::endl << "Your move (e.g. A1): " ;
@@ -321,6 +332,7 @@ bool human_turn(int field[SIZE_Y][SIZE_X], const int player)
 		px = ((int) input.at(0) ) - 65;
 		py = ((int) input.at(1) ) - 49;
 
+		//Check if this turn is valid
 		if (turn_valid(field, player, px, py))
 		{
 			//accept turn;
@@ -332,6 +344,7 @@ bool human_turn(int field[SIZE_Y][SIZE_X], const int player)
 		}
 	}
 
+	//Execute the turn
 	execute_turn(field, player, px, py);
 
 	return true;
@@ -346,6 +359,7 @@ bool human_turn(int field[SIZE_Y][SIZE_X], const int player)
 int autoTurn(int playerType ,int field[SIZE_Y][SIZE_X], const int player)
 {
 	int turnsPlayer = 0;
+	//Human turn
 	if(playerType == HUMAN)
 	{
 		turnsPlayer = possible_turns(field,player);
@@ -355,6 +369,7 @@ int autoTurn(int playerType ,int field[SIZE_Y][SIZE_X], const int player)
 			show_field(field);
 		}
 	}
+	//Coputer turn
 	else if(playerType == COMPUTER)
 	{
 		turnsPlayer = possible_turns(field,player);
@@ -367,6 +382,13 @@ int autoTurn(int playerType ,int field[SIZE_Y][SIZE_X], const int player)
 	return turnsPlayer;
 }
 
+/**
+ * @brief handles the main game loop
+ * @param player_typ
+ *
+ * starts the main loop
+ * Handles the result of the game
+ */
 void game(const int player_typ[2])
 {
 
@@ -387,6 +409,7 @@ void game(const int player_typ[2])
 		if(turnsPlayer1 == 0 && turnsPlayer2 == 0) break;
 	}
 
+	//Handle the result of the game
 	switch (winner(field))
 	{
 	case 0:
@@ -401,6 +424,14 @@ void game(const int player_typ[2])
 	}
 }
 
+/**
+ * @brief asks for the game options and starts the game
+ * @return
+ *
+ * This function may start the tests
+ * Asks for the player types
+ * Starts agame
+ */
 int main(void)
 {
 	//Test stuff

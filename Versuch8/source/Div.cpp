@@ -13,11 +13,18 @@ Div::Div(Expression *left, Expression *right) : leftOperand(left), rightOperand(
 {
 }
 
+/**
+ * @brief returns the quotient of left and right expression
+ * @return the quotient of right and left
+ */
 double Div::evaluate() const
 {
 	return this->leftOperand->evaluate() / this->rightOperand->evaluate();
 }
 
+/**
+ * @brief prints a representation of the calculation to cout
+ */
 void Div::print() const
 {
 	std::cout << "(";

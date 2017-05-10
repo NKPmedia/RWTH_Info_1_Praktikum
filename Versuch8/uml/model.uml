@@ -8,8 +8,8 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_mvB-UCgmEeedJvqfG263Pg" name="~Expression"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_s6IrICglEeedJvqfG263Pg" name="Add" visibility="package">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_HDdSgCgoEeedJvqfG263Pg" name="leftOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_xy4bYCgoEeedJvqfG263Pg" name="rightOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HDdSgCgoEeedJvqfG263Pg" name="leftOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xy4bYCgoEeedJvqfG263Pg" name="rightOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_KzVTACgnEeedJvqfG263Pg" name="print"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_MdDp4CgnEeedJvqfG263Pg" name="evaluate"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_TPvzwCgpEeedJvqfG263Pg" name="Add">
@@ -18,8 +18,8 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ttvSUCglEeedJvqfG263Pg" name="Sub">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_U5qNUCgoEeedJvqfG263Pg" name="leftOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_7k8LUCgoEeedJvqfG263Pg" name="rightOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_U5qNUCgoEeedJvqfG263Pg" name="leftOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7k8LUCgoEeedJvqfG263Pg" name="rightOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Hc3GcCgnEeedJvqfG263Pg" name="print"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_JluQYCgnEeedJvqfG263Pg" name="evaluate"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_whU3cCgpEeedJvqfG263Pg" name="Sub">
@@ -28,8 +28,8 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_u9KS0CglEeedJvqfG263Pg" name="Mul">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_2w3YUCgoEeedJvqfG263Pg" name="leftOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_8Fq50CgoEeedJvqfG263Pg" name="rightOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2w3YUCgoEeedJvqfG263Pg" name="leftOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8Fq50CgoEeedJvqfG263Pg" name="rightOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_FEvYgCgnEeedJvqfG263Pg" name="print"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_GK4hMCgnEeedJvqfG263Pg" name="evaluate"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_zuxq4CgpEeedJvqfG263Pg" name="Mul" visibility="public">
@@ -38,8 +38,8 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_v3vrwCglEeedJvqfG263Pg" name="Div">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_3xrVECgoEeedJvqfG263Pg" name="leftOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_8xhTMCgoEeedJvqfG263Pg" name="rightOperand" visibility="public" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3xrVECgoEeedJvqfG263Pg" name="leftOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8xhTMCgoEeedJvqfG263Pg" name="rightOperand" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_CPwvcCgnEeedJvqfG263Pg" name="print"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_DvTPkCgnEeedJvqfG263Pg" name="evaluate"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_B5uGoCgqEeedJvqfG263Pg" name="Div" visibility="public">
@@ -48,7 +48,7 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_QbvicCgmEeedJvqfG263Pg" name="Const">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_HXVbUCgpEeedJvqfG263Pg" name="value">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HXVbUCgpEeedJvqfG263Pg" name="value" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ycKT0CgmEeedJvqfG263Pg" name="print"/>
@@ -60,7 +60,7 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Ra0Z0CgmEeedJvqfG263Pg" name="Result" visibility="package">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_BVaVICgpEeedJvqfG263Pg" name="expression" type="_8XZf0CgkEeedJvqfG263Pg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BVaVICgpEeedJvqfG263Pg" name="expression" visibility="private" type="_8XZf0CgkEeedJvqfG263Pg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="__6jyoCgmEeedJvqfG263Pg" name="print"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_BCV6ECgnEeedJvqfG263Pg" name="evaluate"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Qy0o4CgqEeedJvqfG263Pg" name="Result">

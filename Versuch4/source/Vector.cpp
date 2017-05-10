@@ -131,12 +131,24 @@ void Vector::ausgabe() const
 	std::cout << "Z : " << this->getZ() << std::endl;
 }
 
+/**
+ * @brief checks if a vector has given x,y,z values
+ * @param x
+ * @param y
+ * @param z
+ * @return
+ */
 bool Vector::hasValues(int x, int y, int z) const
 {
 	if(x == this->getX() && y == this->getY() && z == this->getZ()) return true;
 	return false;
 }
 
+/**
+ * @brief rotates a vector around the Z axis
+ * @param angle
+ * @return new rotated vector
+ */
 Vector Vector::rotZ(double angle) const
 {
 	double x = cos(angle)*this->getX() -sin(angle)*this->getY();

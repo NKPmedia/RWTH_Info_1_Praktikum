@@ -32,6 +32,10 @@ std::ostream& operator << (std::ostream& out ,Student student)
 	return student.print(out);
 }
 
+/**
+ * @brief starts a UI to interact with a vector of students
+ * @return
+ */
 int main()
 {
 	std::vector<Student> testvector;
@@ -43,6 +47,7 @@ int main()
     std::cout << "Wollen sie den Stack selbst fuellen? (j)/(n) ";
     std::cin >> abfrage;
 
+    //Should the program fill the vector
     if (abfrage != 'j')
     {
     	student = Student(12345, "Siggi Baumeister", "23.04.1983", "Ahornst.55");
@@ -70,6 +75,7 @@ int main()
         {
             case '1':
 				{
+		        	//Add a student
 					unsigned int matNr = 0;
 					std::string name = "";
 					std::string dateOfBirth = "";
@@ -140,11 +146,15 @@ int main()
 					std::cin >> matNr;
 
 					//Search the matNr
-					for(it = testvector.begin();it !=testvector.end();it++)
+					for(it = testvector.begin();it !=testvector.end();)
 					{
 						if(*it == matNr) //TODO: the compiler sees matNr as an int!?
 						{
-							testvector.erase(it);
+							testvector.erase(it++);
+						}
+						else
+						{
+							++it;
 						}
 					}
 

@@ -13,11 +13,18 @@ Mul::Mul(Expression *left, Expression *right) : leftOperand(left), rightOperand(
 {
 }
 
+/**
+ * @brief returns the product of left and right expression
+ * @return the product of right and left
+ */
 double Mul::evaluate() const
 {
 	return this->leftOperand->evaluate() * this->rightOperand->evaluate();
 }
 
+/**
+ * @brief prints a representation of the calculation to cout
+ */
 void Mul::print() const
 {
 	std::cout << "(";

@@ -15,6 +15,10 @@
 
 int fibonacci(int i);
 
+/**
+ * @brief Berechnet die Fibonacci Zahlen von 0 bis 26
+ * @return
+ */
 int main()
 {
     for(int i = 0; i < 26 ; i++)

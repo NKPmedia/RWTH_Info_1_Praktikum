@@ -13,11 +13,18 @@ Sub::Sub(Expression *left, Expression *right) : leftOperand(left), rightOperand(
 {
 }
 
+/**
+ * @brief returns the difference of left and right expression
+ * @return the difference of right and left
+ */
 double Sub::evaluate() const
 {
 	return this->leftOperand->evaluate() - this->rightOperand->evaluate();
 }
 
+/**
+ * @brief prints a representation of the calculation to cout
+ */
 void Sub::print() const
 {
 	std::cout << "(";

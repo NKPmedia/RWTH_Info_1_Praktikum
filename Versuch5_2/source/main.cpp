@@ -21,6 +21,10 @@
 #include "Student.h"
 #include "List.h"
 
+/**
+ * @brief starts a UI to interact with a List of students
+ * @return
+ */
 int main()
 {
 	List testStack;
@@ -30,6 +34,7 @@ int main()
     std::cout << "Wollen sie den Stack selbst fuellen? (j)/(n) ";
     std::cin >> abfrage;
 
+    //Fills the list
     if (abfrage != 'j')
     {
     	student = Student(12345, "Siggi Baumeister", "23.04.1983", "Ahornst.55");
@@ -55,6 +60,7 @@ int main()
 
         switch (abfrage)
         {
+        	//Adds a student at the head
             case '1':
 				{
 					unsigned int matNr = 0;
@@ -77,6 +83,7 @@ int main()
 					testStack.enqueue_head(student);
 				}
 				break;
+			//Delets the last student
             case '2':
             	{
 					Student delElem = Student();
@@ -95,15 +102,19 @@ int main()
             	}
                 break;
 
+            //Prints the list
             case '3':
                 std::cout << "Inhalt des Stacks:\n";
                 testStack.print_forwards();
                 break;
 
+            //Prints the list backwords
             case '4':
                 std::cout << "Inhalt des Stacks:\n";
                 testStack.print_backwards();
                 break;
+
+            //Delets a student by his number
             case '5':
             	{
 					std::cout << "Welche Nummer wollen sie löschen:\n";
@@ -115,6 +126,8 @@ int main()
 					else std::cout << "Error\n";
 					break;
             	}
+
+            //Adds a student at the tail
             case '6':
             	{
             		unsigned int matNr = 0;
@@ -137,6 +150,8 @@ int main()
           			testStack.enqueue_tail(student);
       			}
             	break;
+
+            //Quit
             case '7':
                 std::cout << "Das Programm wird nun beendet";
                 break;

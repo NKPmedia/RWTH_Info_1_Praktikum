@@ -13,11 +13,18 @@ Add::Add(Expression *left, Expression *right) : leftOperand(left), rightOperand(
 {
 }
 
+/**
+ * @brief returns the sum of left and right expression
+ * @return the sum of right and left
+ */
 double Add::evaluate() const
 {
 	return this->leftOperand->evaluate() + this->rightOperand->evaluate();
 }
 
+/**
+ * @brief prints a representation of the calculation to cout
+ */
 void Add::print() const
 {
 	std::cout << "(";

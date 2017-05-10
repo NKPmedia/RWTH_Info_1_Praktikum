@@ -50,8 +50,8 @@ char getCharFromTableReverse(char c,std::array<std::array<char, 26>, 2> lookUpTa
 	throw std::invalid_argument("Not a char of A - Z");
 }
 
-/*!
- * Main Methode
+/**
+ * @brief Main Methode
  *
  * Nimmt ein Wort und verschlüsselt bzw. entschlüsselt es
  */
@@ -80,6 +80,7 @@ int main ()
 	//Wort eingeben lassen
 	std::cout << "Gib ein verschlüsseltes Wort ein " << std::endl;
 	std::cin >> word2;
+
 	//Wort verschlüsseln
 	for(char& c : word2)
 	{

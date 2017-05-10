@@ -17,10 +17,18 @@ Const::~Const()
 {
 }
 
+/**
+ * @brief returns value of the const
+ * @return the sum of right and left
+ */
 double Const::evaluate() const
 {
 	return this->value;
 }
+
+/**
+ * @brief prints a representation of the calculation to cout
+ */
 void Const::print() const
 {
 	std::cout << this->value;
