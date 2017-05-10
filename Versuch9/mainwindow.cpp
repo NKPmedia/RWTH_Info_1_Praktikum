@@ -30,6 +30,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+/**
+ * @brief draws a rectangle at a random position and prints the value of lineEdit + 4
+ *
+ * A Test function to test the QGraphicsscene scene
+ * it draws a rectangle at a random position
+ * and prints the value of lineEdit + 4
+ */
 void MainWindow::on_pushButton_Eingabe_clicked()
 {
     QString text = this->ui->lineEdit_Eingabe->text();
@@ -43,25 +50,42 @@ void MainWindow::on_pushButton_Eingabe_clicked()
     qDebug() << QString("EingabeButton gedrück! Mit dem Text: %1").arg(zahl + 4);
 }
 
+/**
+ * @brief Closes the UI
+ */
 void MainWindow::on_actionExit_triggered()
 {
     this->close();
 }
 
+/**
+ * @brief Clears the QGraphicsscenen scene
+ *
+ * Clears the scenen of this class
+ */
 void MainWindow::on_actionClear_Scene_triggered()
 {
     this->scene.clear();
 }
 
+/**
+ * @brief Opens a info dialog
+ */
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox msgBox;
 
-    msgBox.setText("Das ist ein Straßenplaner der im Rahmen des Ino1 Praktikums entstanen ist.");
+    msgBox.setText("Das ist ein Straßenplaner der im Rahmen des Info Praktikums entstanen ist.");
     msgBox.setDefaultButton(QMessageBox::Cancel);
     msgBox.exec();
 }
 
+/**
+ * @brief Draws two cities at the scene of this class
+ *
+ * This function tests the City class an their draw function
+ * Draws two static cities
+ */
 void MainWindow::on_pushButton_test_draw_City_clicked()
 {
     this->scene.clear();
@@ -74,7 +98,12 @@ void MainWindow::on_pushButton_test_draw_City_clicked()
     map.draw(this->scene);
 }
 
-
+/**
+ * @brief Draws two cities and a street at the scene of this class
+ *
+ * This function tests the City and Street class an their draw function
+ * Draws two static cities with a street
+ */
 void MainWindow::on_pushButton_test_draw_street_clicked()
 {
     this->scene.clear();
@@ -85,6 +114,12 @@ void MainWindow::on_pushButton_test_draw_street_clicked()
     street.draw(this->scene);
 }
 
+/**
+ * @brief Adds two streets with cities to the map of this class to test the addStreet function
+ *
+ * Add to streets one is correct, one if incorrect an can not be added
+ * Writes the result to QDebug
+ */
 void MainWindow::on_pushButton_test_add_street_clicked()
 {
     this->scene.clear();
@@ -113,6 +148,9 @@ void MainWindow::on_pushButton_test_add_street_clicked()
     map.draw(this->scene);
 }
 
+/**
+ * @brief Enables or disables the test boxes
+ */
 void MainWindow::on_checkBox_clicked()
 {
     if(this->ui->checkBox->isChecked())
@@ -129,6 +167,14 @@ void MainWindow::on_checkBox_clicked()
     }
 }
 
+/**
+ * @brief Opens the addCityDialog and creats a new city
+ *
+ * Opens the addCityDialog
+ * Adds a new city to the map of this class if the user clicked OK
+ *
+ * Draws the full map
+ */
 void MainWindow::on_pushButton_add_city_clicked()
 {
     newCityUI newCityUi;
@@ -144,12 +190,25 @@ void MainWindow::on_pushButton_add_city_clicked()
 
 }
 
+/**
+ * @brief Uses MapIO to fill the map with cities
+ *
+ * Uses MapIO to fill the map
+ *
+ * MapIO can be a class that adds preconfigured cities or
+ * read them out of a file
+ */
 void MainWindow::on_pushButton_fill_map_clicked()
 {
     this->mapIo->fillMap(this->map);
     this->map.draw(this->scene);
 }
 
+/**
+ * @brief Tets the abstractMap
+ *
+ * This code is coppyed from the script
+ */
 void MainWindow::on_pushButton_test_abstractMap_clicked()
 {
     City *a = new City("a", 0, 0);
@@ -232,6 +291,10 @@ void MainWindow::on_pushButton_test_abstractMap_clicked()
     qDebug() << "MapTest: End Test of the Map.";
 }
 
+/**
+ * @brief Starts the dijkstra algo with Bonn and Aachen and draws the way
+ *
+ */
 void MainWindow::on_pushButton_test_dijkstra_clicked()
 {
     qDebug("Test Dijkstra");
@@ -246,6 +309,15 @@ void MainWindow::on_pushButton_test_dijkstra_clicked()
     }
 }
 
+/**
+ * @brief opens the dijkstraDialog and starts the algo
+ *
+ * Opens the dijkstraDialog
+ * if the user pressed OK this function will start the algo ith the cities
+ * set in the dialog
+ *
+ * Then the function draws the way on to the scene of this class
+ */
 void MainWindow::on_pushButton_show_dijkstra_dialog_clicked()
 {
     DijkstraDialog dijkstraDialog;
@@ -265,6 +337,14 @@ void MainWindow::on_pushButton_show_dijkstra_dialog_clicked()
     }
 }
 
+/**
+ * @brief Open the addStreetDialog and adds a street
+ *
+ * Opens the addStreetDialog
+ * if the user pressed OK this function will create a new street and adds it to the map
+ *
+ * then it draws the map at the scene of this class
+ */
 void MainWindow::on_pushButton_add_street_clicked()
 {
     AddStreetDialog addStreetDialog;

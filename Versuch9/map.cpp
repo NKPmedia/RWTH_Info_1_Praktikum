@@ -10,11 +10,21 @@ Map::Map()
 {
 
 }
+
+/**
+ * @brief adds a city to the map (vector)
+ * @param city to be added
+ */
 void Map::addCity(City* city)
 {
     this->cities.push_back(city);
 }
 
+/**
+ * @brief adds a street to the map (vector)
+ * @param street to be added
+ * @return false if the street cant be added
+ */
 bool Map::addStreet(Street * street)
 {
     //Does the map contain the sities?
@@ -27,6 +37,11 @@ bool Map::addStreet(Street * street)
     return false;
 }
 
+/**
+ * @brief finds a city by a name
+ * @param city_name
+ * @return the city
+ */
 City* Map::find_city(const QString city_name) const
 {
     //Draw all cities
@@ -39,6 +54,10 @@ City* Map::find_city(const QString city_name) const
     return NULL;
 }
 
+/**
+ * @brief draws the whole map at a QGraphicsscene
+ * @param scene
+ */
 void Map::draw(QGraphicsScene &scene)
 {
     qDebug() << QString("Male alle Städte");
@@ -109,6 +128,10 @@ double Map::get_length(const Street* street) const
     return sqrt(pow(xDiff,2)+pow(yDiff,2));
 }
 
+/**
+ * @brief returns all cities
+ * @return all cities
+ */
 std::vector<City*> Map::getCities()
 {
     return this->cities;

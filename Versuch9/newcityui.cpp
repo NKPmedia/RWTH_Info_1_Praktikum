@@ -15,6 +15,10 @@ newCityUI::~newCityUI()
     delete ui;
 }
 
+/**
+ * @brief Returns a new city with the values of the newCityDialog
+ * @return new city
+ */
 City* newCityUI::createNewCityObject()
 {
 

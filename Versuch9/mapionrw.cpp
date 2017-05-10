@@ -12,6 +12,10 @@ MapIoNrw::~MapIoNrw()
     qDebug("Destructor MapIoNrw");
 }
 
+/**
+ * @brief fills a given map with preconfigured cities and streets
+ * @param map
+ */
 void MapIoNrw::fillMap(AbstractMap &map)
 {
     City *aachen = new City ("Aachen", -100, 100);
