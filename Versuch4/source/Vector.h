@@ -26,6 +26,7 @@ class Vector
     bool ortho(const Vector& input) const;
     double scalarProd(const Vector& input) const;
     double angle(const Vector& input) const;
+    double angleInDegree(const Vector& input) const;
     
     void rotateAroundZ(const double rad);
     
@@ -33,6 +34,7 @@ class Vector
     bool hasValues(int x, int y, int z) const;
 
     Vector rotZ(double angle) const;
+    Vector rotZInDegree(double angle) const;
 
    private:
     double x;

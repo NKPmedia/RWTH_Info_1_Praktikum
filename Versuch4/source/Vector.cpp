@@ -24,11 +24,21 @@ Vector::~Vector()
 /**
  * @brief calculates the angle between two vectors
  * @param input the input vector
- * @return the angle
+ * @return the angle in rad
  */
 double Vector::angle(const Vector& input) const
 {
 	return acos(this->scalarProd(input)/(this->length()*input.length()));
+}
+
+/**
+ * @brief calculates the angle between two vectors
+ * @param input the input vector
+ * @return the angle in degree
+ */
+double Vector::angleInDegree(const Vector& input) const
+{
+	return acos(this->scalarProd(input)/(this->length()*input.length()))*180/M_PI;
 }
 
 /**
@@ -146,13 +156,27 @@ bool Vector::hasValues(int x, int y, int z) const
 
 /**
  * @brief rotates a vector around the Z axis
- * @param angle
+ * @param angle in radiant
  * @return new rotated vector
  */
 Vector Vector::rotZ(double angle) const
 {
 	double x = cos(angle)*this->getX() -sin(angle)*this->getY();
 	double y = sin(angle)*this->getX() +cos(angle)*this->getY();
+	double z = this->getZ();
+
+	return Vector(x,y,z);
+}
+
+/**
+ * @brief rotates a vector around the Z axis
+ * @param angle in Degree
+ * @return new rotated vector
+ */
+Vector Vector::rotZInDegree(double angle) const
+{
+	double x = cos(angle/180*M_PI)*this->getX() -sin(angle/180*M_PI)*this->getY();
+	double y = sin(angle/180*M_PI)*this->getX() +cos(angle/180*M_PI)*this->getY();
 	double z = this->getZ();
 
 	return Vector(x,y,z);

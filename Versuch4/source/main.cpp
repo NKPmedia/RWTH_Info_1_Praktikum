@@ -92,6 +92,8 @@ int main2(int argc, char **argv)
  * This program starts the tests if TEST is 1
  * Then it calculates the distance a person is able to see if he stands on a 500m high tower
  *
+ * Better implementation with angle
+ *
  * @return
  */
 int main(int argc, char **argv)
@@ -102,7 +104,7 @@ int main(int argc, char **argv)
 		RUN_ALL_TESTS();
 	}
 
-	double earthAngle = -1/100000;
+	double earthAngle = -(1.0/10000);
 	int steps = 0;
 
 	Vector person(0,501.8,0);
@@ -111,18 +113,19 @@ int main(int argc, char **argv)
 
 	Vector view = eye.sub(earth);
 	int viewLength = 1;
-	//As long as the view vector is under the eye of the person
-	std::cout << view.scalarProd(earth) << std::endl;
-	while(view.scalarProd(earth) >= 0.01 || view.scalarProd(earth) <= -0.01)
+
+
+	//Until the angle is bigger than 90 degree
+	while(earth.angleInDegree(view) <= 90)
 	{
 		viewLength = view.length();
-		std::cout << view.scalarProd(earth) << std::endl;
+
 		//Creates new earth vector and rotates it
 		earth = Vector(0,6371000,0);
-		earth = earth.rotZ(earthAngle);
+		earth = earth.rotZInDegree(earthAngle);
 
 		view = eye.sub(earth);
-		earthAngle -= 1/100000;
+		earthAngle -= (1.0/10000);
 
 		steps++;
 	}
