@@ -31,7 +31,7 @@ int main ()
  *
  * Bessere Version, da es keine doppelten Berechnungen gibt
  * Ab 45 gibt es falsche Ergebnisse, da dann der Wertebereich von dem Datentyp int zu ende ist.
- * Für größere Zahlen sollte man long long nehmen
+ * Für größere Zahlen sollte man long double nehmen
  */
 int fib(int n)
 {

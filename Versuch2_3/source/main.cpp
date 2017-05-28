@@ -61,6 +61,9 @@ int main ()
 	std::array<std::array<char, 26>, 2> lookUpTable = {{{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'},
 														{'Z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y'}}};
 
+	std::array<std::array<char, 26>, 2> lookUpTableReverse = {{{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Y'},
+														{'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A'}}};
+
 	std::string word = "";
 
 	//Wort eingeben lassen
@@ -81,10 +84,18 @@ int main ()
 	std::cout << "Gib ein verschlüsseltes Wort ein " << std::endl;
 	std::cin >> word2;
 
-	//Wort verschlüsseln
+	//Wort entschlüsseln
 	for(char& c : word2)
 	{
 		std::cout << getCharFromTableReverse(c,lookUpTable);
+	}
+
+	std::cout << std::endl;
+
+	//Wort entschlüsseln
+	for(char& c : word2)
+	{
+		std::cout << getCharFromTable(c,lookUpTableReverse);
 	}
 
 	return 0;

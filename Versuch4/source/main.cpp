@@ -15,6 +15,72 @@
 #include <unistd.h>
 
 /**
+ * @brief lame test function that tests the vector class
+ * @return returns true if every test passed, false if not
+ */
+bool lametestFunction()
+{
+	{
+		Vector vecotr1(1,2,3);
+		Vector vector2(1,1,1);
+
+		Vector add = vecotr1.add(vector2);
+		if(!add.hasValues(2,3,4)) return false;
+	}
+
+	{
+		Vector vecotr1(1,2,3);
+		Vector vector2(1,1,1);
+
+		Vector sub = vecotr1.sub(vector2);
+		if(!sub.hasValues(0,1,2)) return false;
+	}
+
+	{
+		Vector vecotr1(0,1,0);
+		Vector vector2(0,0,1);
+
+		if(!vecotr1.ortho(vector2)) return false;
+	}
+
+	{
+		Vector vecotr1(0,1,0);
+		Vector vector2(0,0,1);
+
+		double angle = vecotr1.angle(vector2);
+
+		if(angle != M_PI/2) return false;
+	}
+
+	{
+		Vector vecotr1(0,1,3);
+		Vector vector2(0,2,-1);
+
+		double scalar = vecotr1.scalarProd(vector2);
+
+		if(scalar != -1.0) return false;
+	}
+
+	{
+		Vector vecotr1(0,1,3);
+		double length = vecotr1.length();
+
+		if(length != 3.1622776601683795) return false;
+	}
+
+	{
+		Vector vecotr1(0,1,6);
+		Vector result = vecotr1.rotZ(M_PI/2);
+
+		if(result.getX() != -1)return false;
+		if(result.getY() != 6.123233995736766e-17)return false;
+		if(result.getZ() != 6)return false;
+	}
+
+	return true;
+}
+
+/**
  *
  * @param argc
  * @param argv
@@ -102,6 +168,15 @@ int main(int argc, char **argv)
 	{
 		::testing::InitGoogleTest(&argc, argv);
 		RUN_ALL_TESTS();
+
+		if(!lametestFunction())
+		{
+			std::cout << "Fehler!" << std::endl;
+		}
+		else
+		{
+			std::cout << "Alles gut!" << std::endl;
+		}
 	}
 
 	double earthAngle = -(1.0/10000);
@@ -150,3 +225,5 @@ int main(int argc, char **argv)
 	return 0;
 
 }
+
+

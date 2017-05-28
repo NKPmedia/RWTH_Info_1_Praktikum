@@ -19,6 +19,7 @@ int getPosition(char);
 
 int main()
 {
+	aufgabe5();
 	return 0;
 
 }
@@ -32,6 +33,7 @@ void aufgabe5()
 {
     {// Eigener Block
         int iFeld[2] = {1, 2};
+        const int iZweite = 1;
         /*
          * Die Werte kann man über 0 und 1 erreichen.
          */
@@ -42,12 +44,12 @@ void aufgabe5()
          * Bsp. spielfeld[1][0] oder spielfeld[0][2]
          */
 
-        std::cout << iFeld[0];
+        std::cout << iFeld[0] << " ";
         std::cout << iFeld[1] << std::endl;
 
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 3; j++) {
-                std::cout << spielfeld[i][j];
+                std::cout << spielfeld[i][j] << " ";
             }
         }
 
@@ -58,10 +60,13 @@ void aufgabe5()
 
         for (const auto &array : spielfeld2) {
             for (const auto &feld : array) {
-                std::cout << feld;
+                std::cout << feld << " ";
             }
         }
+
+        std::cout << iZweite;
     }
+    //std::cout << iZweite; Geht nicht! Ist halt außerhalb des Blockes!?
 }
 
 /*!
@@ -100,6 +105,8 @@ int getPosition(char buchstabe)
 {
 	if(buchstabe >= 97) return buchstabe - 96;
 	else return buchstabe - 64;
+
+	//oder modulo 32
 }
 
 /*!

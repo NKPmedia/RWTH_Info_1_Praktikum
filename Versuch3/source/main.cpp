@@ -220,7 +220,7 @@ bool areFieldsEqual(const int field[SIZE_Y][SIZE_X],int field2[SIZE_Y][SIZE_X])
  * @param pos_y y position of the turn
  *
  * This function places a stone of the player at the position (pos_y pos_y)
- * and changes all opponent stones witch are between this stone an another of the player
+ * and changes all opponent stones which are between this stone an another of the player
  */
 void execute_turn(int field[SIZE_Y][SIZE_X], const int player, const int pos_x, const int pos_y)
 {
@@ -457,7 +457,7 @@ int main(void)
 	int player2 = 1;
 	std::cin >> player2;
 
-	int player_type[2] = { COMPUTER, COMPUTER };  //Contains information wether players are HUMAN(=1) or COPMUTER(=2)
+	int player_type[2] = { COMPUTER, COMPUTER };  //Contains information whether players are HUMAN(=1) or COPMUTER(=2)
 	player_type[0] = player1;
 	player_type[1] = player2;
 

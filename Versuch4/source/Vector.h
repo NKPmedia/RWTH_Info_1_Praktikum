@@ -25,6 +25,7 @@ class Vector
     double length() const;
     bool ortho(const Vector& input) const;
     double scalarProd(const Vector& input) const;
+
     double angle(const Vector& input) const;
     double angleInDegree(const Vector& input) const;
     

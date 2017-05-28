@@ -16,7 +16,7 @@
 int fibonacci(int i);
 
 /**
- * @brief Berechnet die Fibonacci Zahlen von 0 bis 26
+ * @brief Berechnet die Fibonacci Zahlen von 0 bis 25
  * @return
  */
 int main()
