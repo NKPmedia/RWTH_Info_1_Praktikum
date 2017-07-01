@@ -33,3 +33,8 @@ void Sub::print() const
 	this->rightOperand->print();
 	std::cout << ")";
 }
+
+Sub::~Sub()
+{
+	std::cout << "Deleted Sub" << std::endl;
+}

@@ -14,6 +14,7 @@ class Div : public Expression
 {
 public:
 	Div(Expression *left , Expression *right);
+	virtual ~Div();
 	virtual double evaluate() const; // calculates and returns the value of expression
 	virtual void print() const;
 

@@ -14,6 +14,7 @@ class Mul : public Expression
 {
 public:
 	Mul(Expression *left , Expression *right);
+	virtual ~Mul();
 	virtual double evaluate() const; // calculates and returns the value of expression
 	virtual void print() const;
 

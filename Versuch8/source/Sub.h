@@ -14,6 +14,7 @@ class Sub : public Expression
 {
 public:
 	Sub(Expression *left , Expression *right);
+	virtual ~Sub();
 	virtual double evaluate() const; // calculates and returns the value of expression
 	virtual void print() const;
 

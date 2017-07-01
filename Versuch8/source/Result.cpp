@@ -15,6 +15,7 @@ Result::Result(Expression *expression) : expression(expression)
 
 Result::~Result()
 {
+	std::cout << "Deleted Result" << std::endl;
 }
 
 /**

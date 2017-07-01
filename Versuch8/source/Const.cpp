@@ -15,6 +15,7 @@ Const::Const(double value) : value(value)
 
 Const::~Const()
 {
+	std::cout << "Deleted Const" << std::endl;
 }
 
 /**

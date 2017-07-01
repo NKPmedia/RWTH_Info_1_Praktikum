@@ -33,3 +33,8 @@ void Div::print() const
 	this->rightOperand->print();
 	std::cout << ")";
 }
+
+Div::~Div()
+{
+	std::cout << "Deleted Div" << std::endl;
+}

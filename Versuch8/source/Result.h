@@ -14,7 +14,7 @@ class Result : public Expression
 {
 public:
 	Result(Expression *expression);
-	~Result();
+	virtual ~Result();
 	virtual double evaluate() const; // calculates and returns the value of expression
 	virtual void print() const; // returns the mathematical expression as string
 

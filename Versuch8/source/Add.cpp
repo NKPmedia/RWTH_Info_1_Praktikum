@@ -33,3 +33,8 @@ void Add::print() const
 	this->rightOperand->print();
 	std::cout << ")";
 }
+
+Add::~Add()
+{
+	std::cout << "Deleted Add" << std::endl;
+}

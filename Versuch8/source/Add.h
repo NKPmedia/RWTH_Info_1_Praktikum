@@ -14,6 +14,7 @@ class Add : public Expression
 {
 public:
 	Add(Expression *left , Expression *right);
+	virtual ~Add();
 	virtual double evaluate() const; // calculates and returns the value of expression
 	virtual void print() const;
 

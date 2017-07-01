@@ -33,3 +33,8 @@ void Mul::print() const
 	this->rightOperand->print();
 	std::cout << ")";
 }
+
+Mul::~Mul()
+{
+	std::cout << "Deleted Mul" << std::endl;
+}
