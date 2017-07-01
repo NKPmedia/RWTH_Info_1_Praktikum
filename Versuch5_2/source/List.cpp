@@ -124,28 +124,28 @@ bool List::delElementByNr(Student& pData,unsigned int nummer)
 	else
 	{
 		//Find element
-		while (cursor->getNext()->getData().getMatNr() != nummer)
+		while (cursor->getData().getMatNr() != nummer)
 		{
 			cursor = cursor->getNext();
 			if(cursor == NULL) return false;
 		}
 
-		ListElem* before = cursor;
-		//If element is in the middle
-		if(cursor->getNext()->getNext() == NULL)
+		ListElem* before = cursor->getBefore();
+		//If element is at the end
+		if(cursor->getNext() == NULL)
 		{
-			pData = cursor->getNext()->getData();
-			delete cursor->getNext();
+			pData = cursor->getData();
+			delete cursor;
 			before->setNext(NULL);
 			tail = before;
 			return true;
 		}
-		//If element is at the end
+		//If element is in the middle
 		else
 		{
-			ListElem* next = cursor->getNext()->getNext();
-			pData = cursor->getNext()->getData();
-			delete cursor->getNext();
+			ListElem* next = cursor->getNext();
+			pData = cursor->getData();
+			delete cursor;
 			before->setNext(next);
 			next->setBefore(before);
 			return true;

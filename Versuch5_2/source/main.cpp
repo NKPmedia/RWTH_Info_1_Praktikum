@@ -27,7 +27,7 @@
  */
 int main()
 {
-	List testStack;
+	List testList;
     Student student = Student();
 
     char abfrage;
@@ -38,11 +38,11 @@ int main()
     if (abfrage != 'j')
     {
     	student = Student(12345, "Siggi Baumeister", "23.04.1983", "Ahornst.55");
-    	testStack.enqueue_head(student);
+    	testList.enqueue_head(student);
     	student = Student(23456, "Walter Rodenstock", "15.10.1963", "W�llnerstr.9");
-    	testStack.enqueue_head(student);
+    	testList.enqueue_head(student);
     	student = Student(34567, "Harro Simoneit", "19.06.1971", "Am Markt 1");
-    	testStack.enqueue_head(student);
+    	testList.enqueue_head(student);
     }
 
     do
@@ -80,7 +80,7 @@ int main()
 
 					student = Student(matNr, name, dateOfBirth, address);
 
-					testStack.enqueue_head(student);
+					testList.enqueue_head(student);
 				}
 				break;
 			//Delets the last student
@@ -88,7 +88,7 @@ int main()
             	{
 					Student delElem = Student();
 					bool success = false;
-					success = testStack.dequeue(delElem);
+					success = testList.dequeue(delElem);
 
 					if(success)
 					{
@@ -105,13 +105,13 @@ int main()
             //Prints the list
             case '3':
                 std::cout << "Inhalt des Stacks:\n";
-                testStack.print_forwards();
+                testList.print_forwards();
                 break;
 
             //Prints the list backwords
             case '4':
                 std::cout << "Inhalt des Stacks:\n";
-                testStack.print_backwards();
+                testList.print_backwards();
                 break;
 
             //Delets a student by his number
@@ -121,7 +121,7 @@ int main()
 					unsigned int nummer = 0;
 					std::cin >> nummer;
 					Student delElem = Student();
-					bool succ = testStack.delElementByNr(delElem,nummer);
+					bool succ = testList.delElementByNr(delElem,nummer);
 					if(succ) std::cout << "Wurde gelösche\n";
 					else std::cout << "Error\n";
 					break;
@@ -147,7 +147,7 @@ int main()
 
             		student = Student(matNr, name, dateOfBirth, address);
 
-          			testStack.enqueue_tail(student);
+          			testList.enqueue_tail(student);
       			}
             	break;
 
