@@ -19,7 +19,7 @@ int getPosition(char);
 
 int main()
 {
-	aufgabe5();
+	aufgabe4_6_7();
 	return 0;
 
 }

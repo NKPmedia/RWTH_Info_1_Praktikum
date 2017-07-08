@@ -151,6 +151,7 @@ int main()
 						if(*it == matNr) //TODO: the compiler sees matNr as an int!?
 						{
 							testvector.erase(it++);
+							break;
 						}
 						else
 						{

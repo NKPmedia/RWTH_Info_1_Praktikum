@@ -140,6 +140,16 @@ bool List::delElementByNr(Student& pData,unsigned int nummer)
 			tail = before;
 			return true;
 		}
+		//If the element is at the beginning
+		else if (head == cursor)
+		{
+			ListElem* next = cursor->getNext();
+			pData = cursor->getData();
+			head = next;
+			delete cursor;
+			next->setBefore(before);
+
+		}
 		//If element is in the middle
 		else
 		{
